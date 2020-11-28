@@ -170,7 +170,7 @@ class Config(object):
     # Gradient norm clipping
     GRADIENT_CLIP_NORM = 5.0
 
-    def __init__(self, BACKBONE,  NUM_CLASSES , class_names, IMAGES_PER_GPU, IMAGE_MAX_DIM, IMAGE_MIN_DIM, DETECTION_MIN_CONFIDENCE, IMAGE_RESIZE_MODE,GPU_COUNT):
+    def __init__(self, BACKBONE,  NUM_CLASSES , class_names, IMAGES_PER_GPU, IMAGE_MAX_DIM, IMAGE_MIN_DIM, DETECTION_MIN_CONFIDENCE, IMAGE_RESIZE_MODE,GPU_COUNT, STEPS_PER__EPOH, VALIDATION_STEPS):
         self.GPU_COUNT = GPU_COUNT
         self.IMAGES_PER_GPU = IMAGES_PER_GPU
         self.NUM_CLASSES = NUM_CLASSES
@@ -178,6 +178,8 @@ class Config(object):
         self.IMAGE_MAX_DIM = IMAGE_MAX_DIM
         self.IMAGE_MIN_DIM = IMAGE_MIN_DIM
         self.DETECTION_MIN_CONFIDENCE = DETECTION_MIN_CONFIDENCE
+        self.STEPS_PER__EPOH = STEPS_PER__EPOH
+        self.VALIDATION_STEPS = VALIDATION_STEPS
         
         # Backbone network architecture
         # Supported values are: resnet50, resnet101.
